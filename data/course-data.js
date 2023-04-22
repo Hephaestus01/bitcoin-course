@@ -1,62 +1,58 @@
 export const data = [
   {
-    lesson1: {
-      id: 1,
-      title: "What is Bitcoin?",
-      content: [
+    id: 1,
+    title: "What is Bitcoin?",
+    content: [
+      {
+        point: "Definition of Bitcoin and cryptocurrency",
+        text: 'Bitcoin is a digital or virtual currency that uses cryptography for security and operates on a decentralized network, meaning it is not controlled by any central authority like a government or bank. It was the first successful implementation of a cryptocurrency, which is a form of digital asset that exists purely as data on a computer network. Cryptocurrencies are designed to function as a medium of exchange, allowing users to conduct transactions without the need for intermediaries such as banks. The term "cryptocurrency" comes from the use of cryptographic techniques to secure the network and verify transactions.',
+      },
+      {
+        point: "Brief history of Bitcoin and its creator, Satoshi Nakamoto",
+        text: 'Bitcoin was created in 2009 by an unknown person or group of people using the pseudonym Satoshi Nakamoto. The idea of a decentralized digital currency had been proposed in various forms since the 1980s, but it was not until the release of the Bitcoin whitepaper, titled "Bitcoin: A Peer-to-Peer Electronic Cash System," that the concept became a reality. The identity of Satoshi Nakamoto remains a mystery to this day, as they disappeared from the public eye in 2010, leaving the development of Bitcoin to a group of dedicated volunteers. The early years of Bitcoin were marked by a relatively small user base and low market value. However, as more people began to recognize the potential of the technology, the value of Bitcoin increased rapidly, garnering significant media attention and attracting new users and investors. Today, Bitcoin is the most widely recognized and valuable cryptocurrency, with a market capitalization in the hundreds of billions of dollars.',
+      },
+      {
+        point: "Bitcoin as digital money",
+        text: "Bitcoin functions as digital money, allowing people to send and receive value electronically without the need for traditional financial institutions. It is based on a public ledger called the blockchain, which records every transaction in a transparent and immutable way. This transparency and security make Bitcoin an attractive alternative to fiat currencies, particularly in countries with unstable financial systems or strict capital controls. Unlike traditional currencies, which are issued and controlled by governments, Bitcoin is created through a process called mining. Miners compete to solve complex mathematical problems, and the first to solve the problem is rewarded with new Bitcoins. This process not only creates new coins but also ensures the security and integrity of the network.",
+      },
+    ],
+    quiz: {
+      questions: [
         {
-          point: "Definition of Bitcoin and cryptocurrency",
-          text: 'Bitcoin is a digital or virtual currency that uses cryptography for security and operates on a decentralized network, meaning it is not controlled by any central authority like a government or bank. It was the first successful implementation of a cryptocurrency, which is a form of digital asset that exists purely as data on a computer network. Cryptocurrencies are designed to function as a medium of exchange, allowing users to conduct transactions without the need for intermediaries such as banks. The term "cryptocurrency" comes from the use of cryptographic techniques to secure the network and verify transactions.',
+          question:
+            "What is the purpose of cryptography in Bitcoin and other cryptocurrencies?",
+          options: [
+            "a) To create new coins",
+            "b) To secure the network and verify transactions",
+            "c) To make transactions anonymous",
+            "d) To control the price of the cryptocurrency",
+          ],
+          answer: "b",
         },
         {
-          point: "Brief history of Bitcoin and its creator, Satoshi Nakamoto",
-          text: 'Bitcoin was created in 2009 by an unknown person or group of people using the pseudonym Satoshi Nakamoto. The idea of a decentralized digital currency had been proposed in various forms since the 1980s, but it was not until the release of the Bitcoin whitepaper, titled "Bitcoin: A Peer-to-Peer Electronic Cash System," that the concept became a reality. The identity of Satoshi Nakamoto remains a mystery to this day, as they disappeared from the public eye in 2010, leaving the development of Bitcoin to a group of dedicated volunteers. The early years of Bitcoin were marked by a relatively small user base and low market value. However, as more people began to recognize the potential of the technology, the value of Bitcoin increased rapidly, garnering significant media attention and attracting new users and investors. Today, Bitcoin is the most widely recognized and valuable cryptocurrency, with a market capitalization in the hundreds of billions of dollars.',
+          question: "Who is Satoshi Nakamoto?",
+          options: [
+            "a) The inventor of Bitcoin",
+            "b) The CEO of a major cryptocurrency exchange",
+            "c) A famous economist who predicted the rise of digital currencies",
+            "d) The creator of the first blockchain",
+          ],
+          answer: "a",
         },
         {
-          point: "Bitcoin as digital money",
-          text: "Bitcoin functions as digital money, allowing people to send and receive value electronically without the need for traditional financial institutions. It is based on a public ledger called the blockchain, which records every transaction in a transparent and immutable way. This transparency and security make Bitcoin an attractive alternative to fiat currencies, particularly in countries with unstable financial systems or strict capital controls. Unlike traditional currencies, which are issued and controlled by governments, Bitcoin is created through a process called mining. Miners compete to solve complex mathematical problems, and the first to solve the problem is rewarded with new Bitcoins. This process not only creates new coins but also ensures the security and integrity of the network.",
+          question: "How does Bitcoin differ from traditional fiat currencies?",
+          options: [
+            "a) It is backed by gold",
+            "b) It is controlled by a central authority",
+            "c) It operates on a decentralized network",
+            "d) It is only used for illegal activities",
+          ],
+          answer: "c",
         },
       ],
-      quiz: {
-        questions: [
-          {
-            question:
-              "What is the purpose of cryptography in Bitcoin and other cryptocurrencies?",
-            options: [
-              "a) To create new coins",
-              "b) To secure the network and verify transactions",
-              "c) To make transactions anonymous",
-              "d) To control the price of the cryptocurrency",
-            ],
-            answer: "b",
-          },
-          {
-            question: "Who is Satoshi Nakamoto?",
-            options: [
-              "a) The inventor of Bitcoin",
-              "b) The CEO of a major cryptocurrency exchange",
-              "c) A famous economist who predicted the rise of digital currencies",
-              "d) The creator of the first blockchain",
-            ],
-            answer: "a",
-          },
-          {
-            question:
-              "How does Bitcoin differ from traditional fiat currencies?",
-            options: [
-              "a) It is backed by gold",
-              "b) It is controlled by a central authority",
-              "c) It operates on a decentralized network",
-              "d) It is only used for illegal activities",
-            ],
-            answer: "c",
-          },
-        ],
-      },
     },
   },
   {
-    lesson2: {
       id: 2,
       title: "Introduction to Blockchain Technology",
       content: [
@@ -108,10 +104,8 @@ export const data = [
           },
         ],
       },
-    },
   },
   {
-    lesson3: {
       id: 3,
       title: "Bitcoin Mining and the Creation of New Coins",
       content: [
@@ -158,9 +152,6 @@ export const data = [
           },
         ],
       },
-    },
-
-    lesson4: {
       id: 4,
       title: "How to Buy, Store, and Use Bitcoin",
       content: [
@@ -212,5 +203,4 @@ export const data = [
         ],
       },
     },
-  },
 ];

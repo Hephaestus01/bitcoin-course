@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { StatusBar } from "expo-status-bar";
 import {
@@ -14,15 +14,26 @@ import {
 import HomeScreen from "./screens/HomeScreen";
 import LessonScreen from "./screens/LessonScreen";
 
+import { data } from "./data/course-data";
+
 export default function App() {
   const [screen, setScreen] = useState("home");
+  const [currentLesson, setCurrentLesson] = useState(data[0]);
+
+  useEffect(() => {
+    console.log(currentLesson);
+  });
 
   return (
     <SafeAreaView style={styles.safeAreaView}>
       {screen === "home" ? (
-        <HomeScreen setScreen={setScreen} />
+        <HomeScreen setScreen={setScreen} setCurrentLesson={setCurrentLesson} />
       ) : screen === "lesson" ? (
-        <LessonScreen setScreen={setScreen} setLesson={setLesson} />
+        <LessonScreen
+          setScreen={setScreen}
+          setCurrentLesson={setCurrentLesson}
+          currentLesson={currentLesson}
+        />
       ) : null}
     </SafeAreaView>
   );

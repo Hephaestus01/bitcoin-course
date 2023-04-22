@@ -14,18 +14,19 @@ import LessonCarousel from "../components/LessonCarousel";
 import Button from "../components/Button";
 import NavButton from "../components/NavButton"
 
-export default function HomeScreen({ setScreen }) {
+export default function HomeScreen({ setScreen, setCurrentLesson }) {
   
 
   return (
-      <>
-          <View>
-            <NavButton/>
-          </View>
-      <LessonCarousel />
+    <>
       <View>
-        
+        <NavButton />
       </View>
+      <LessonCarousel
+        setScreen={setScreen}
+        setCurrentLesson={setCurrentLesson}
+      />
+      <View></View>
     </>
   );
 }

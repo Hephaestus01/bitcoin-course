@@ -3,6 +3,7 @@ import {
   Dimensions,
   Text,
   View,
+  TouchableOpacity,
   StyleSheet,
   ScrollView,
   StatusBar,
@@ -10,13 +11,13 @@ import {
 
 import { data } from "../data/course-data";
 
-export default function LessonCarousel() {
+export default function LessonCarousel({ setScreen, setCurrentLesson }) {
   const OFFSET = 40;
   const width = Dimensions.get("window").width;
   const ITEM_WIDTH = width - OFFSET * 2;
 
   // Extract lessons from the data object
-  const lessons = data.flatMap((lessonGroup) => Object.values(lessonGroup));
+  // const lessons = data.flatMap((lessonGroup) => Object.values(lessonGroup));
 
   return (
     <View style={{ flex: 1, paddingTop: StatusBar.currentHeight }}>
@@ -35,9 +36,13 @@ export default function LessonCarousel() {
           scrollEventThrottle={16}
           disableIntervalMomentum={true}
         >
-          {lessons.map((lesson, index) => (
+          {data.map((lesson, index) => (
             <View key={index} style={{ paddingHorizontal: 5 }}>
-              <View
+              <TouchableOpacity
+                onPress={() => {
+                  setCurrentLesson(lesson);
+                  setScreen("lesson");
+                }}
                 style={[
                   styles.card,
                   styles.cardShadow,
@@ -45,7 +50,7 @@ export default function LessonCarousel() {
                     width: ITEM_WIDTH,
                     marginLeft: index === 0 ? OFFSET : undefined,
                     marginRight:
-                      index === lessons.length - 1 ? OFFSET : undefined,
+                      index === data.length - 1 ? OFFSET : undefined,
                     padding: 50,
                   },
                 ]}
@@ -56,7 +61,7 @@ export default function LessonCarousel() {
                 <Text style={{ textAlign: "center", fontSize: 16 }}>
                   {lesson.title}
                 </Text>
-              </View>
+              </TouchableOpacity>
             </View>
           ))}
         </ScrollView>
@@ -73,7 +78,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: "white",
     height: 150,
-    marginVertical: 8
+    marginVertical: 8,
   },
   cardShadow: {
     shadowColor: "rgb(249, 168, 212)",
