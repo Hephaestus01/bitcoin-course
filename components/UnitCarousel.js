@@ -9,9 +9,9 @@ import {
   StatusBar,
 } from "react-native";
 
-import { data } from "../data/course-data";
+import { data } from "../data/real-data";
 
-export default function LessonCarousel({ setScreen, setCurrentLesson }) {
+export default function UnitCarousel({ setScreen, setCurrentLesson }) {
   const OFFSET = 40;
   const width = Dimensions.get("window").width;
   const ITEM_WIDTH = width - OFFSET * 2;
@@ -36,16 +36,17 @@ export default function LessonCarousel({ setScreen, setCurrentLesson }) {
           scrollEventThrottle={16}
           disableIntervalMomentum={true}
         >
-          {data.map((lesson, index) => (
+          {data.map((unit, index) => (
             <View key={index} style={{ paddingHorizontal: 5 }}>
               <TouchableOpacity
-                onPress={() => {
-                  setCurrentLesson(lesson);
-                  setScreen("lesson");
-                }}
+                // onPress={() => {
+                  // setCurrentLesson(unit);
+                  // setScreen("unit");
+                // }}
                 style={[
                   styles.card,
                   styles.cardShadow,
+                  { backgroundColor: unit.metadata.color },
                   {
                     width: ITEM_WIDTH,
                     marginLeft: index === 0 ? OFFSET : undefined,
@@ -56,12 +57,13 @@ export default function LessonCarousel({ setScreen, setCurrentLesson }) {
                 ]}
               >
                 <Text style={{ textAlign: "center", fontSize: 30 }}>
-                  Lesson {lesson.id}:
+                  Unit {unit.id}:
                 </Text>
                 <Text style={{ textAlign: "center", fontSize: 16 }}>
-                  {lesson.title}
+                  {unit.title}
                 </Text>
               </TouchableOpacity>
+              {/* <LessonCarousel/> */}
             </View>
           ))}
         </ScrollView>
@@ -69,6 +71,8 @@ export default function LessonCarousel({ setScreen, setCurrentLesson }) {
     </View>
   );
 }
+
+// function LessonCarousel
 
 const styles = StyleSheet.create({
   card: {

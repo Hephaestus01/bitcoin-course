@@ -10,23 +10,22 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import LessonCarousel from "../components/LessonCarousel";
+import UnitCarousel from "../components/UnitCarousel";
 import Button from "../components/Button";
-import NavButton from "../components/NavButton"
+import NavButton from "../components/NavButton";
 
 export default function HomeScreen({ setScreen, setCurrentLesson }) {
-  
-
   return (
     <>
       <View>
         <NavButton />
       </View>
-      <LessonCarousel
+      <UnitCarousel
         setScreen={setScreen}
         setCurrentLesson={setCurrentLesson}
       />
-      <View></View>
+      <View>
+      </View>
     </>
   );
 }

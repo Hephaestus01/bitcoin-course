@@ -1,0 +1,12 @@
++ @types/three@0.150.2
++ react@17.0.2
++ expo-file-system@13.2.1
++ three@0.145.0
++ react-native@0.64.4
+added 92 packages from 82 contributors, removed 94 packages, updated 44 packages, moved 7 packages and audited 1517 packages in 50.214s
+
+101 packages are looking for funding
+  run `npm fund` for details
+
+found 14 vulnerabilities (1 low, 8 high, 5 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
