@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import { StatusBar } from "expo-status-bar";
 import {
   StyleSheet,
   Text,
@@ -9,8 +8,9 @@ import {
   SafeAreaView,
   Button,
   TouchableOpacity,
+  StatusBar,
 } from "react-native";
-
+import NavButton from "./components/NavButton";
 import HomeScreen from "./screens/HomeScreen";
 import LessonScreen from "./screens/LessonScreen";
 
@@ -26,23 +26,29 @@ export default function App() {
   });
 
   return (
-    <SafeAreaView style={styles.safeAreaView}>
-      {screen === "home" ? (
-        <HomeScreen
-          setScreen={setScreen}
-          setCurrentLesson={setCurrentLesson}
-          currentLesson={currentLesson}
-          setCurrentUnit={setCurrentUnit}
-          currentUnit={currentUnit}
-        />
-      ) : screen === "lesson" ? (
-        <LessonScreen
-          setScreen={setScreen}
-          setCurrentLesson={setCurrentLesson}
-          currentLesson={currentLesson}
-        />
-      ) : null}
-    </SafeAreaView>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView style={styles.safeAreaView}>
+        <View style={{backgroundColor:'transparent', zIndex:-1}}>
+          <NavButton />
+        </View>
+        {screen === "home" ? (
+          <HomeScreen
+            setScreen={setScreen}
+            setCurrentLesson={setCurrentLesson}
+            currentLesson={currentLesson}
+            setCurrentUnit={setCurrentUnit}
+            currentUnit={currentUnit}
+          />
+        ) : screen === "lesson" ? (
+          <LessonScreen
+            setScreen={setScreen}
+            setCurrentLesson={setCurrentLesson}
+            currentLesson={currentLesson}
+          />
+        ) : null}
+      </SafeAreaView>
+    </>
   );
 }
 

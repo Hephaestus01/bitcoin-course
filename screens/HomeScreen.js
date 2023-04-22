@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import { StatusBar } from "expo-status-bar";
 import {
   StyleSheet,
   Text,
@@ -12,7 +11,6 @@ import {
 
 import UnitCarousel from "../components/UnitCarousel";
 import Button from "../components/Button";
-import NavButton from "../components/NavButton";
 
 export default function HomeScreen({
   setScreen,
@@ -23,9 +21,6 @@ export default function HomeScreen({
 }) {
   return (
     <>
-      <View>
-        <NavButton />
-      </View>
       <UnitCarousel
         setScreen={setScreen}
         setCurrentLesson={setCurrentLesson}
