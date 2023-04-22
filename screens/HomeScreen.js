@@ -14,7 +14,13 @@ import UnitCarousel from "../components/UnitCarousel";
 import Button from "../components/Button";
 import NavButton from "../components/NavButton";
 
-export default function HomeScreen({ setScreen, setCurrentLesson }) {
+export default function HomeScreen({
+  setScreen,
+  setCurrentLesson,
+  currentLesson,
+  setCurrentUnit,
+  currentUnit,
+}) {
   return (
     <>
       <View>
@@ -23,9 +29,10 @@ export default function HomeScreen({ setScreen, setCurrentLesson }) {
       <UnitCarousel
         setScreen={setScreen}
         setCurrentLesson={setCurrentLesson}
+        currentLesson={currentLesson}
+        setCurrentUnit={setCurrentUnit}
+        currentUnit={currentUnit}
       />
-      <View>
-      </View>
     </>
   );
 }

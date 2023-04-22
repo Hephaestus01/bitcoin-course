@@ -125,7 +125,7 @@ export const data = [
       },
     ],
     metadata: {
-      color: "#FFC0CB",
+      color: "#feedfd",
       links: [],
     },
   },
@@ -268,7 +268,7 @@ export const data = [
       },
     ],
     metadata: {
-      color: "#ADD8E6",
+      color: "#b9e3ee",
       links: [],
     },
   },
@@ -331,6 +331,20 @@ export const data = [
           "Fungible",
           "Comparison between Bitcoin and traditional forms of money",
         ],
+        content: [
+          "Bitcoin possesses several properties that make it an attractive form of sound money, which is a type of money that maintains its value over time, is resistant to manipulation, and fosters economic growth. Sound money has historically been associated with scarce commodities like gold, but Bitcoin brings a digital alternative that shares many of these desirable properties.",
+          {
+            list: [
+              "Scarcity: Bitcoin has a finite supply of 21 million coins, ensuring a level of scarcity that helps preserve its value. This limited supply contrasts with fiat currencies, which can be printed at the discretion of central banks and are prone to inflation.",
+              "Divisibility: Each bitcoin can be divided into 100 million smaller units called satoshis, allowing for transactions of various sizes and precision. This divisibility makes Bitcoin suitable for a wide range of economic activities.",
+              "Portability: As a digital currency, Bitcoin can be easily transferred and stored on electronic devices or even in physical forms like paper wallets. This portability enables global transactions and facilitates trade across borders.",
+              "Durability: Unlike physical currencies that can deteriorate or be destroyed, Bitcoin is stored on a decentralized network of computers, making it highly resistant to damage or loss. As long as the private keys are securely stored, bitcoins can be preserved indefinitely.",
+              "Censorship resistance: Bitcoin transactions cannot be easily censored or restricted by governments or other entities. This resistance ensures that individuals can transact freely without interference, fostering economic freedom and empowerment.",
+              "Fungibility: Although the transparency of the Bitcoin blockchain can sometimes raise concerns about fungibility, ongoing development efforts aim to improve this property. Bitcoin is generally treated as interchangeable, with one bitcoin being equal in value to any other bitcoin.",
+            ],
+          },
+          "These properties make Bitcoin a compelling alternative to traditional forms of money, as it addresses many of the shortcomings associated with fiat currencies. By adhering to the principles of sound money, Bitcoin has the potential to serve as a stable store of value and reliable medium of exchange for users worldwide.",
+        ],
       },
       {
         id: "3d",
@@ -341,6 +355,19 @@ export const data = [
           "Market sentiment and news",
           "Regulatory developments",
           "Technological advancements and network effects",
+        ],
+        content: [
+          "The price of Bitcoin, like any other asset, is determined by the market forces of supply and demand. As a decentralized digital currency with a limited supply, various factors can influence its price, including macroeconomic events, technological advancements, and market sentiment.",
+          "Bitcoin's price can be highly volatile, with dramatic fluctuations occurring within short periods. These price swings are influenced by factors such as:",
+          {
+            list: [
+              "Market sentiment: Positive or negative news related to Bitcoin, the cryptocurrency market, or the global economy can have a significant impact on the price of Bitcoin. The fear of missing out (FOMO) and panic selling are examples of emotional reactions that can drive the price up or down.",
+              "Regulatory changes: As governments and regulatory bodies around the world grapple with how to treat cryptocurrencies, any changes in regulation can have a direct impact on the price of Bitcoin. For example, favorable regulation can lead to increased adoption and demand, while restrictive regulation can have the opposite effect.",
+              "Technological advancements: Improvements in the Bitcoin protocol or the development of new technologies that facilitate the use of Bitcoin can positively influence its price, as they can lead to increased adoption and demand.",
+              "Macroeconomic events: Global economic events, such as changes in interest rates, political instability, or currency crises, can influence the demand for Bitcoin. In some cases, Bitcoin can serve as a hedge against economic uncertainty, driving its price up during times of turmoil.",
+            ],
+          },
+          "While short-term price fluctuations can be difficult to predict, many Bitcoin supporters believe that its long-term value will continue to rise as the network matures and gains mainstream acceptance. As a relatively young and evolving asset, the price of Bitcoin is likely to continue experiencing volatility, presenting both risks and opportunities for investors and traders.",
         ],
       },
     ],
@@ -382,7 +409,7 @@ export const data = [
       },
     ],
     metadata: {
-      color: "#90EE90",
+      color: "#fccdb8",
       links: [],
     },
   },
@@ -400,6 +427,20 @@ export const data = [
           "Censorship resistance and privacy",
           "Limited supply and protection against inflation",
         ],
+        content: [
+          "Bitcoin, as the first and most widely adopted cryptocurrency, offers several benefits compared to traditional financial systems and other digital currencies. Some of the key advantages of Bitcoin include:",
+          {
+            list: [
+              "Decentralization: Bitcoin operates on a decentralized network of nodes and miners, ensuring that no single entity can control or manipulate the currency. This decentralized nature reduces the risk of centralized failures and protects against censorship and interference from governments or other organizations.",
+              "Borderless transactions: Bitcoin transactions can be sent and received globally, without the need for intermediaries like banks or payment processors. This enables faster, cheaper, and more efficient cross-border transactions, opening up new possibilities for international trade and remittances.",
+              "Financial inclusion: With just a smartphone and an internet connection, anyone can access and use Bitcoin, regardless of their location or financial status. This opens up financial opportunities for billions of unbanked and underbanked individuals around the world.",
+              "Security: Bitcoin's blockchain is secured by a robust consensus mechanism called Proof of Work, making it extremely difficult and expensive for attackers to manipulate the network. This provides a high level of security and trust for users.",
+              "Limited supply: The total supply of Bitcoin is capped at 21 million coins, creating a deflationary environment and potentially acting as a hedge against inflation in traditional fiat currencies.",
+              "Transparency: All Bitcoin transactions are recorded on a public, transparent ledger, ensuring accountability and making it difficult for malicious actors to tamper with the data.",
+            ],
+          },
+          "While Bitcoin offers numerous benefits, it is essential to consider its limitations and challenges as well. Factors such as scalability, energy consumption, and regulatory concerns should be taken into account when evaluating the potential of Bitcoin and other cryptocurrencies.",
+        ],
       },
       {
         id: "4b",
@@ -410,6 +451,19 @@ export const data = [
           "Energy consumption of mining",
           "Regulatory uncertainty and potential for government intervention",
           "Limited adoption and acceptance by merchants",
+        ],
+        content: [
+          "Despite its numerous benefits, Bitcoin also has several limitations and challenges that need to be considered. Some of the key limitations of Bitcoin include:",
+          {
+            list: [
+              "Scalability: Bitcoin's transaction throughput is limited by its block size and block time. As a result, the network can become congested during periods of high demand, leading to increased transaction fees and longer confirmation times.",
+              "Energy consumption: Bitcoin's Proof of Work consensus mechanism requires miners to perform complex mathematical computations, consuming large amounts of energy. This energy consumption has raised environmental concerns and spurred debates about more sustainable alternatives.",
+              "Volatility: The value of Bitcoin can be highly volatile, with significant price fluctuations occurring regularly. This volatility can make it challenging to use as a stable store of value or medium of exchange.",
+              "Regulatory uncertainty: As a relatively new and disruptive technology, Bitcoin faces regulatory uncertainty in many jurisdictions. This can create challenges for businesses and individuals seeking to use or invest in the cryptocurrency.",
+              "User experience: Bitcoin's user experience can be complex and intimidating for newcomers, with challenges such as managing private keys, understanding transaction fees, and navigating wallet software.",
+            ],
+          },
+          "It is important to weigh the benefits and limitations of Bitcoin when considering its potential applications and long-term viability. As the cryptocurrency space continues to evolve, new solutions and advancements may address some of these challenges and unlock new possibilities for Bitcoin and other digital currencies.",
         ],
       },
       {
@@ -470,7 +524,7 @@ export const data = [
       },
     ],
     metadata: {
-      color: "#FFA07A",
+      color: "#e4f3ea",
       links: [],
     },
   },
@@ -551,7 +605,7 @@ export const data = [
       },
     ],
     metadata: {
-      color: "#9370DB",
+      color: "#eeddff",
       links: [],
     },
   },

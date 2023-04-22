@@ -5,11 +5,11 @@ import {
   Text,
   TextInput,
   View,
+  ScrollView,
   SafeAreaView,
   Button,
   TouchableOpacity,
 } from "react-native";
-import { ScrollView } from "react-native-web";
 
 export default function LessonScreen({
   setScreen,
@@ -26,11 +26,31 @@ export default function LessonScreen({
           onPress={() => setScreen("home")}
         >
           <Text style={{ fontSize: 24 }}>Home</Text>
+          <ScrollView>
+            <View>
+              <Text>Lesson {lesson.id}</Text>
+              <Text>{lesson.title}</Text>
+            </View>
+            <View>
+              {lesson.content.map((segment, index) =>
+                // Conditional rendering based on the type of the segment
+                typeof segment === "string" ? (
+                  <Text key={index}>{segment}</Text>
+                ) : (
+                  segment.list && (
+                    <View key={index} style={{ marginLeft: 20 }}>
+                      {segment.list.map((item, itemIndex) => (
+                        <Text key={itemIndex}>
+                          {"\u2022"} {item}
+                        </Text>
+                      ))}
+                    </View>
+                  )
+                )
+              )}
+            </View>
+          </ScrollView>
         </TouchableOpacity>
-        <View>
-          <Text>Lesson {lesson.id}</Text>
-          <Text>{lesson.title}</Text>
-        </View>
       </>
     );
   };

@@ -14,11 +14,12 @@ import {
 import HomeScreen from "./screens/HomeScreen";
 import LessonScreen from "./screens/LessonScreen";
 
-import { data } from "./data/course-data";
+import { data } from "./data/real-data";
 
 export default function App() {
   const [screen, setScreen] = useState("home");
-  const [currentLesson, setCurrentLesson] = useState(data[0]);
+  const [currentUnit, setCurrentUnit] = useState(data[0]);
+  const [currentLesson, setCurrentLesson] = useState(data[0].lessons[0]);
 
   useEffect(() => {
     console.log(currentLesson);
@@ -27,7 +28,13 @@ export default function App() {
   return (
     <SafeAreaView style={styles.safeAreaView}>
       {screen === "home" ? (
-        <HomeScreen setScreen={setScreen} setCurrentLesson={setCurrentLesson} />
+        <HomeScreen
+          setScreen={setScreen}
+          setCurrentLesson={setCurrentLesson}
+          currentLesson={currentLesson}
+          setCurrentUnit={setCurrentUnit}
+          currentUnit={currentUnit}
+        />
       ) : screen === "lesson" ? (
         <LessonScreen
           setScreen={setScreen}
@@ -44,6 +51,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#F3E5F5",
+    backgroundColor: "#fef7e8",
   },
 });
