@@ -20,7 +20,7 @@ export default function LessonCarousel() {
 
   return (
     <View style={{ flex: 1, paddingTop: StatusBar.currentHeight }}>
-      <View style={{ height: 150 }}>
+      <View style={{ height: 350 }}>
         <ScrollView
           horizontal
           pagingEnabled
@@ -36,9 +36,8 @@ export default function LessonCarousel() {
           disableIntervalMomentum={true}
         >
           {lessons.map((lesson, index) => (
-            <View style={{ backgroundColor: "red", paddingHorizontal: 5 }}>
+            <View key={index} style={{ paddingHorizontal: 5 }}>
               <View
-                key={index}
                 style={[
                   styles.card,
                   styles.cardShadow,
@@ -47,10 +46,14 @@ export default function LessonCarousel() {
                     marginLeft: index === 0 ? OFFSET : undefined,
                     marginRight:
                       index === lessons.length - 1 ? OFFSET : undefined,
+                    padding: 50,
                   },
                 ]}
               >
                 <Text style={{ textAlign: "center", fontSize: 30 }}>
+                  Lesson {lesson.id}:
+                </Text>
+                <Text style={{ textAlign: "center", fontSize: 16 }}>
                   {lesson.title}
                 </Text>
               </View>
@@ -70,6 +73,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: "white",
     height: 150,
+    marginVertical: 8
   },
   cardShadow: {
     shadowColor: "rgb(249, 168, 212)",

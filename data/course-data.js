@@ -1,6 +1,7 @@
 export const data = [
   {
     lesson1: {
+      id: 1,
       title: "What is Bitcoin?",
       content: [
         {
@@ -56,6 +57,7 @@ export const data = [
   },
   {
     lesson2: {
+      id: 2,
       title: "Introduction to Blockchain Technology",
       content: [
         {
@@ -110,6 +112,7 @@ export const data = [
   },
   {
     lesson3: {
+      id: 3,
       title: "Bitcoin Mining and the Creation of New Coins",
       content: [
         {
@@ -158,6 +161,7 @@ export const data = [
     },
 
     lesson4: {
+      id: 4,
       title: "How to Buy, Store, and Use Bitcoin",
       content: [
         {

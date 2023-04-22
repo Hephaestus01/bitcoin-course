@@ -10,41 +10,23 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import LessonCarousel from "../components/LessonCarousel";
-import Button from "../components/Button";
-import NavButton from "../components/NavButton"
-
-export default function HomeScreen({ setScreen }) {
-  
-
+export default function NavButton() {
   return (
-      <>
-          <View>
-            <NavButton/>
-          </View>
-      <LessonCarousel />
-      <View>
-        
-      </View>
-    </>
+    <TouchableOpacity style={[styles.navButton, styles.buttonShadow]}>
+      <Text style={styles.buttonText}>Text</Text>
+    </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
-  counterView: {
-    marginBottom: 20,
-  },
-  counterText: {
-    fontSize: 48,
-    color: "#000",
-    paddingHorizontal: 4,
-  },
-  button: {
+  navButton: {
     flexDirection: "row",
-    height: 48,
+    height: 60,
+    width: 60,
     margin: 8,
     alignItems: "center",
     justifyContent: "center",
+    alignSelf: "right",
     borderRadius: 999,
     borderWidth: 1,
     backgroundColor: "#FFF",
