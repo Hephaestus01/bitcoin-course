@@ -20,55 +20,64 @@ export default function UnitCarousel({ setScreen, setCurrentLesson }) {
   // const lessons = data.flatMap((lessonGroup) => Object.values(lessonGroup));
 
   return (
-    <View style={{ flex: 1, paddingTop: StatusBar.currentHeight }}>
-        <ScrollView
-          horizontal
-          pagingEnabled
-          snapToInterval={ITEM_WIDTH}
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={{ paddingHorizontal: 0 }}
-          onScroll={(event) => {
-            const currentIndex = Math.round(
-              event.nativeEvent.contentOffset.x / ITEM_WIDTH
-            );
-          }}
-          scrollEventThrottle={16}
-          disableIntervalMomentum={true}
-        >
-          {data.map((unit, index) => (
-            <View key={index} style={{ paddingHorizontal: 5 }}>
-              <View style={{height: 350}}>
-                <TouchableOpacity
-                  style={[
-                    {
-                      backgroundColor: unit.metadata.color,
-                      width: ITEM_WIDTH,
-                      marginLeft: index === 0 ? OFFSET : undefined,
-                      marginRight:
-                        index === data.length - 1 ? OFFSET : undefined,
-                      padding: 50,
-                    },
-                    styles.card,
-                    styles.cardShadow,
-                  ]}
-                >
-                  <Text style={{ textAlign: "center", fontSize: 30 }}>
-                    Unit {unit.id}:
-                  </Text>
-                  <Text style={{ textAlign: "center", fontSize: 16 }}>
-                    {unit.title}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-
-              <LessonCarousel
-                unit={unit}
-                setScreen={setScreen}
-                setCurrentLesson={setCurrentLesson}
-              />
+    <View
+      style={{
+        flex: 1,
+        paddingTop: StatusBar.currentHeight,
+        backgroundColor: "rgba(52, 52, 52, alpha)",
+      }}
+    >
+      <ScrollView
+        horizontal
+        pagingEnabled
+        snapToInterval={ITEM_WIDTH}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingHorizontal: 0 }}
+        onScroll={(event) => {
+          const currentIndex = Math.round(
+            event.nativeEvent.contentOffset.x / ITEM_WIDTH
+          );
+        }}
+        scrollEventThrottle={16}
+        disableIntervalMomentum={true}
+      >
+        {data.map((unit, index) => (
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            key={index}
+            style={{ paddingHorizontal: 5 }}
+          >
+            <View style={{ height: 300 }}>
+              <TouchableOpacity
+                style={[
+                  {
+                    backgroundColor: unit.metadata.color,
+                    width: ITEM_WIDTH,
+                    marginLeft: index === 0 ? OFFSET : undefined,
+                    marginRight: index === data.length - 1 ? OFFSET : undefined,
+                    padding: 50,
+                  },
+                  styles.card,
+                  styles.cardShadow,
+                ]}
+              >
+                <Text style={{ textAlign: "center", fontSize: 30 }}>
+                  Unit {unit.id}:
+                </Text>
+                <Text style={{ textAlign: "center", fontSize: 16 }}>
+                  {unit.title}
+                </Text>
+              </TouchableOpacity>
             </View>
-          ))}
-        </ScrollView>
+
+            <LessonCarousel
+              unit={unit}
+              setScreen={setScreen}
+              setCurrentLesson={setCurrentLesson}
+            />
+          </ScrollView>
+        ))}
+      </ScrollView>
     </View>
   );
 }
@@ -121,7 +130,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     justifyContent: "center",
     borderRadius: 20,
-    marginVertical: 8,
+    // marginVertical: 8,
   },
   cardShadow: {
     shadowColor: "rgb(249, 168, 212)",
@@ -138,8 +147,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 20,
     backgroundColor: "white",
-    height: 155,
-    marginVertical: 8,
+    // height: 300,
+    // marginVertical: 8,
   },
   lessonCardShadow: {
     shadowColor: "rgb(249, 168, 212)",
