@@ -7,13 +7,13 @@ import {
   TextInput,
   View,
   SafeAreaView,
-  Button,
   TouchableOpacity,
 } from "react-native";
 
 import LessonCarousel from "../components/LessonCarousel";
+import Button from "../components/Button";
 
-export default function HomeScreen({setScreen}) {
+export default function HomeScreen({ setScreen }) {
   const [count, setCount] = useState(0);
   const onPress = () => {
     setCount((prevCount) => prevCount + 1);
@@ -25,25 +25,15 @@ export default function HomeScreen({setScreen}) {
   };
 
   return (
-    <View>
+    <>
       <LessonCarousel />
-      <View style={styles.counterView}>
-        <Text style={styles.counterText}>{count}</Text>
+      <View>
+        <Text>Count: {count}</Text>
+        <Button buttonText={"Press Me"} onPress={onPress} />
+        <Button buttonText={"Press Me"} onPress={onReset} />
+        <StatusBar style="auto" />
       </View>
-      <TouchableOpacity
-        style={[styles.button, styles.buttonShadow]}
-        onPress={onPress}
-      >
-        <Text style={styles.buttonText}>Add One</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={[styles.button, styles.buttonShadow]}
-        onPress={onReset}
-      >
-        <Text style={styles.buttonText}>Reset</Text>
-      </TouchableOpacity>
-      <StatusBar style="auto" />
-    </View>
+    </>
   );
 }
 
