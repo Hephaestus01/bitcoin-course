@@ -62,7 +62,7 @@ export default function UnitCarousel({ setScreen, setCurrentLesson }) {
               key={index}
               style={{
                 paddingHorizontal: 5,
-                backgroundColor: "blue",
+                // backgroundColor: "blue",
                 width: ITEM_WIDTH,
               }}
             >
@@ -72,7 +72,7 @@ export default function UnitCarousel({ setScreen, setCurrentLesson }) {
                   height: 360,
                   width: ITEM_WIDTH,
                   padding: 50,
-                  backgroundColor: "green",
+                  // backgroundColor: "green",
                   transform: [{ scale: translate }],
                 }}
               >

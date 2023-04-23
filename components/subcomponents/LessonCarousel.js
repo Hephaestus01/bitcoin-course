@@ -16,7 +16,7 @@ export default function LessonCarousel({ unit, setScreen, setCurrentLesson }) {
 
   return (
     <ScrollView
-      style={{ marginTop: 8, backgroundColor: "red" }}
+      style={{ marginTop: 8}}
       snapToInterval={ITEM_HEIGHT}
       showsVerticalScrollIndicator={false}
       scrollEventThrottle={16}
