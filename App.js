@@ -22,7 +22,7 @@ export default function App() {
   const [currentLesson, setCurrentLesson] = useState(data[0].lessons[0]);
 
   useEffect(() => {
-    console.log(currentLesson);
+    console.log(currentLesson.title);
   });
 
   return (

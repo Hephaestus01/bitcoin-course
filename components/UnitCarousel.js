@@ -1,5 +1,6 @@
 import * as React from "react";
 import {
+  Animated,
   Dimensions,
   Text,
   View,
@@ -11,13 +12,13 @@ import {
 
 import { data } from "../data/real-data";
 
+import LessonCarousel from "./subcomponents/LessonCarousel";
+
 export default function UnitCarousel({ setScreen, setCurrentLesson }) {
   const OFFSET = 40;
   const width = Dimensions.get("window").width;
   const ITEM_WIDTH = width - OFFSET * 2;
-
-  // Extract lessons from the data object
-  // const lessons = data.flatMap((lessonGroup) => Object.values(lessonGroup));
+  const scrollX = React.useRef(new Animated.Value(0)).current;
 
   return (
     <View
@@ -32,95 +33,76 @@ export default function UnitCarousel({ setScreen, setCurrentLesson }) {
         pagingEnabled
         snapToInterval={ITEM_WIDTH}
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{ paddingHorizontal: 0 }}
-        onScroll={(event) => {
-          const currentIndex = Math.round(
-            event.nativeEvent.contentOffset.x / ITEM_WIDTH
-          );
+        contentContainerStyle={{
+          paddingHorizontal: OFFSET,
+          alignItems: "center",
         }}
+        onScroll={Animated.event(
+          [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+          { useNativeDriver: false }
+        )}
         scrollEventThrottle={16}
         disableIntervalMomentum={true}
       >
-        {data.map((unit, index) => (
-          <ScrollView
-            showsVerticalScrollIndicator={false}
-            key={index}
-            style={{ paddingHorizontal: 5 }}
-          >
-            <View style={{ height: 300 }}>
-              <TouchableOpacity
-                style={[
-                  {
-                    backgroundColor: unit.metadata.color,
-                    width: ITEM_WIDTH,
-                    marginLeft: index === 0 ? OFFSET : undefined,
-                    marginRight: index === data.length - 1 ? OFFSET : undefined,
-                    padding: 50,
-                  },
-                  styles.card,
-                  styles.cardShadow,
-                ]}
-              >
-                <Text style={{ textAlign: "center", fontSize: 30 }}>
-                  Unit {unit.id}:
-                </Text>
-                <Text style={{ textAlign: "center", fontSize: 16 }}>
-                  {unit.title}
-                </Text>
-              </TouchableOpacity>
-            </View>
+        {data.map((unit, index) => {
+          const inputRange = [
+            (index - 1) * ITEM_WIDTH,
+            index * ITEM_WIDTH,
+            (index + 1) * ITEM_WIDTH,
+          ];
 
-            <LessonCarousel
-              unit={unit}
-              setScreen={setScreen}
-              setCurrentLesson={setCurrentLesson}
-            />
-          </ScrollView>
-        ))}
+          const translate = scrollX.interpolate({
+            inputRange,
+            outputRange: [0.85, 1, 0.85],
+          });
+
+          return (
+            <ScrollView
+              showsVerticalScrollIndicator={false}
+              key={index}
+              style={{
+                paddingHorizontal: 5,
+                backgroundColor: "blue",
+                width: ITEM_WIDTH,
+              }}
+            >
+              <Animated.View
+                style={{
+                  alignItems: "center",
+                  height: 360,
+                  width: ITEM_WIDTH,
+                  padding: 50,
+                  backgroundColor: "green",
+                  transform: [{ scale: translate }],
+                }}
+              >
+                <TouchableOpacity
+                  style={[
+                    {
+                      backgroundColor: unit.metadata.color,
+                    },
+                    styles.card,
+                    styles.cardShadow,
+                  ]}
+                >
+                  <Text style={{ textAlign: "center", fontSize: 30 }}>
+                    Unit {unit.id}:
+                  </Text>
+                  <Text style={{ textAlign: "center", fontSize: 16 }}>
+                    {unit.title}
+                  </Text>
+                </TouchableOpacity>
+              </Animated.View>
+              <LessonCarousel
+                unit={unit}
+                setScreen={setScreen}
+                setCurrentLesson={setCurrentLesson}
+              />
+            </ScrollView>
+          );
+        })}
       </ScrollView>
     </View>
-  );
-}
-
-function LessonCarousel({ unit, setScreen, setCurrentLesson }) {
-  const ITEM_HEIGHT = 150;
-
-  return (
-    <ScrollView
-      style={{ marginTop: 8 }}
-      snapToInterval={ITEM_HEIGHT}
-      showsVerticalScrollIndicator={false}
-      scrollEventThrottle={16}
-      disableIntervalMomentum={true}
-    >
-      {unit.lessons.map((lesson, index) => (
-        <View key={index} style={{ paddingVertical: 5 }}>
-          <TouchableOpacity
-            onPress={() => {
-              setCurrentLesson(lesson);
-              setScreen("lesson");
-            }}
-            style={[
-              styles.lessonCard,
-              styles.lessonCardShadow,
-              // { backgroundColor: lesson.metadata.color },
-              {
-                height: ITEM_HEIGHT,
-                padding: 20,
-                marginVertical: index === 0 ? 8 : undefined,
-              },
-            ]}
-          >
-            <Text style={{ textAlign: "center", fontSize: 16 }}>
-              Lesson {lesson.id}:
-            </Text>
-            <Text style={{ textAlign: "center", fontSize: 12 }}>
-              {lesson.title}
-            </Text>
-          </TouchableOpacity>
-        </View>
-      ))}
-    </ScrollView>
   );
 }
 
@@ -130,27 +112,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     justifyContent: "center",
     borderRadius: 20,
-    // marginVertical: 8,
+    width: 260,
   },
   cardShadow: {
-    shadowColor: "rgb(249, 168, 212)",
-    shadowOffset: {
-      width: 4,
-      height: 4,
-    },
-    shadowOpacity: 1,
-    shadowRadius: 0,
-  },
-  lessonCard: {
-    flex: 1,
-    borderWidth: 1,
-    justifyContent: "center",
-    borderRadius: 20,
-    backgroundColor: "white",
-    // height: 300,
-    // marginVertical: 8,
-  },
-  lessonCardShadow: {
     shadowColor: "rgb(249, 168, 212)",
     shadowOffset: {
       width: 4,
