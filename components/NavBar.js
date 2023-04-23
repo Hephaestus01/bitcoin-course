@@ -55,6 +55,5 @@ const styles = StyleSheet.create({
   },
   navIcon: {
     alignSelf: "center",
-    backgroundColor: "lightgreen",
   },
 });
