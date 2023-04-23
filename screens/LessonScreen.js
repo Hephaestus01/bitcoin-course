@@ -21,12 +21,7 @@ export default function LessonScreen({
   const renderItem = () => {
     return (
       <>
-        <TouchableOpacity
-          style={styles.homeButton}
-          onPress={() => setScreen("home")}
-        >
-          <Text style={{ fontSize: 24 }}>Home</Text>
-          <ScrollView>
+        <ScrollView>
             <View>
               <Text>Lesson {lesson.id}</Text>
               <Text>{lesson.title}</Text>
@@ -50,7 +45,6 @@ export default function LessonScreen({
               )}
             </View>
           </ScrollView>
-        </TouchableOpacity>
       </>
     );
   };
@@ -64,7 +58,3 @@ export default function LessonScreen({
     />
   );
 }
-
-const styles = StyleSheet.create({
-  homeButton: {},
-});

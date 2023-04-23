@@ -10,11 +10,15 @@ import {
   TouchableOpacity,
   StatusBar,
 } from "react-native";
-import NavButton from "./components/NavButton";
+
 import HomeScreen from "./screens/HomeScreen";
 import LessonScreen from "./screens/LessonScreen";
+import NavBar from "./components/navBar";
 
 import { data } from "./data/real-data";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add();
 
 export default function App() {
   const [screen, setScreen] = useState("home");
@@ -30,7 +34,7 @@ export default function App() {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.safeAreaView}>
         <View style={{backgroundColor:'transparent', zIndex:-1}}>
-          <NavButton />
+          <NavBar setScreen={setScreen} />
         </View>
         {screen === "home" ? (
           <HomeScreen
