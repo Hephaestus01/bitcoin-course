@@ -60,7 +60,8 @@ export default function LessonScreen({
 const styles = StyleSheet.create({
   card: {
     backgroundColor: "white",
-    borderRadius: 10,
+    borderRadius: 20,
+    borderWidth: 1,
     padding: 20,
     margin: 20,
     shadowColor: "#000",

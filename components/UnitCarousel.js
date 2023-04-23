@@ -10,7 +10,7 @@ import {
   StatusBar,
 } from "react-native";
 
-import { data } from "../data/real-data";
+import { data } from "../data/real-real-data";
 
 import LessonCarousel from "./subcomponents/LessonCarousel";
 
