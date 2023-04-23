@@ -3,11 +3,9 @@ import {
   StyleSheet,
   FlatList,
   Text,
-  TextInput,
   View,
   ScrollView,
   SafeAreaView,
-  Button,
   TouchableOpacity,
 } from "react-native";
 
@@ -20,32 +18,32 @@ export default function LessonScreen({
 
   const renderItem = () => {
     return (
-      <>
-        <ScrollView>
-            <View>
-              <Text>Lesson {lesson.id}</Text>
-              <Text>{lesson.title}</Text>
-            </View>
-            <View>
-              {lesson.content.map((segment, index) =>
-                // Conditional rendering based on the type of the segment
-                typeof segment === "string" ? (
-                  <Text key={index}>{segment}</Text>
-                ) : (
-                  segment.list && (
-                    <View key={index} style={{ marginLeft: 20 }}>
-                      {segment.list.map((item, itemIndex) => (
-                        <Text key={itemIndex}>
-                          {"\u2022"} {item}
-                        </Text>
-                      ))}
-                    </View>
-                  )
+      <ScrollView>
+        <View style={styles.card}>
+          <Text style={styles.lessonId}>Lesson {lesson.id}</Text>
+          <Text style={styles.lessonTitle}>{lesson.title}</Text>
+          <View>
+            {lesson.content.map((segment, index) =>
+              // Conditional rendering based on the type of the segment
+              typeof segment === "string" ? (
+                <Text style={styles.segmentText} key={index}>
+                  {segment}
+                </Text>
+              ) : (
+                segment.list && (
+                  <View key={index} style={styles.listContainer}>
+                    {segment.list.map((item, itemIndex) => (
+                      <Text style={styles.listItem} key={itemIndex}>
+                        {"\u2022"} {item}
+                      </Text>
+                    ))}
+                  </View>
                 )
-              )}
-            </View>
-          </ScrollView>
-      </>
+              )
+            )}
+          </View>
+        </View>
+      </ScrollView>
     );
   };
 
@@ -58,3 +56,41 @@ export default function LessonScreen({
     />
   );
 }
+
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: "white",
+    borderRadius: 10,
+    padding: 20,
+    margin: 20,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  lessonId: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  lessonTitle: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+  segmentText: {
+    fontSize: 16,
+    marginBottom: 10,
+  },
+  listContainer: {
+    marginLeft: 20,
+    marginBottom: 10,
+  },
+  listItem: {
+    fontSize: 16,
+    marginBottom: 5,
+  },
+});
