@@ -11,13 +11,12 @@ import {
   StatusBar,
 } from "react-native";
 
+import NavBar from "./components/NavBar";
 import HomeScreen from "./screens/HomeScreen";
 import LessonScreen from "./screens/LessonScreen";
-import NavBar from "./components/navBar";
 
 import { data } from "./data/real-data";
 import { library } from "@fortawesome/fontawesome-svg-core";
-
 library.add();
 
 export default function App() {
@@ -33,9 +32,7 @@ export default function App() {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.safeAreaView}>
-        <View style={{backgroundColor:'transparent', zIndex:-1}}>
-          <NavBar setScreen={setScreen} />
-        </View>
+        <NavBar setScreen={setScreen} screen={screen} />
         {screen === "home" ? (
           <HomeScreen
             setScreen={setScreen}
