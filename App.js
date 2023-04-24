@@ -46,7 +46,8 @@ export default function App() {
           <LessonScreen
             setScreen={setScreen}
             setCurrentLesson={setCurrentLesson}
-            currentLesson={currentLesson}
+              currentLesson={currentLesson}
+              currentUnit={currentUnit}
           />
         ) : screen === "nav" ? (
           <NavScreen
