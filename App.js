@@ -16,6 +16,8 @@ import HomeScreen from "./screens/HomeScreen";
 import LessonScreen from "./screens/LessonScreen";
 import NavScreen from "./screens/NavScreen";
 
+import NavBarAdv from "./components/NavBarAdv";
+
 import { data } from "./data/real-real-data";
 import { library } from "@fortawesome/fontawesome-svg-core";
 library.add();
@@ -33,10 +35,11 @@ export default function App() {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.safeAreaView}>
-        <NavBar setScreen={setScreen} screen={screen} />
+        {/* <NavBar setScreen={setScreen} screen={screen} /> */}
         {screen === "home" ? (
           <HomeScreen
             setScreen={setScreen}
+            screen={screen}
             setCurrentLesson={setCurrentLesson}
             currentLesson={currentLesson}
             setCurrentUnit={setCurrentUnit}
@@ -45,9 +48,10 @@ export default function App() {
         ) : screen === "lesson" ? (
           <LessonScreen
             setScreen={setScreen}
+            screen={screen}
             setCurrentLesson={setCurrentLesson}
-              currentLesson={currentLesson}
-              currentUnit={currentUnit}
+            currentLesson={currentLesson}
+            currentUnit={currentUnit}
           />
         ) : screen === "nav" ? (
           <NavScreen

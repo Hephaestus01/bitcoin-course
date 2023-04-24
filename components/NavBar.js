@@ -8,8 +8,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import NavButton from "./subcomponents/NavButton";
-
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";

@@ -11,6 +11,7 @@ import {
 import RenderHTML from "react-native-render-html";
 import Modal from "react-native-modal";
 import Button from "../components/Button";
+import NavBar from "../components/NavBar";
 
 const customRenderers = {
   collectible: {
@@ -47,6 +48,8 @@ const customRenderers = {
    customRenderers,
    setCurrentLesson,
    currentUnit,
+   setScreen,
+   screen
  }) => {
    const scrollViewRef = useRef();
 
@@ -58,6 +61,7 @@ const customRenderers = {
 
    return (
      <ScrollView ref={scrollViewRef}>
+       <NavBar setScreen={setScreen} screen={screen} />
        <View style={{ width: width - 20 }}>
          <Text style={styles.lessonId}>Lesson {lesson.id}</Text>
          <Text style={styles.lessonTitle}>{lesson.title}</Text>
@@ -66,7 +70,7 @@ const customRenderers = {
              if (typeof segment === "string") {
                return (
                  <React.Fragment key={index}>
-                   <View >
+                   <View>
                      <RenderHTML
                        contentWidth={width}
                        source={{ html: segment }}
@@ -137,6 +141,7 @@ const customRenderers = {
 
  export default function LessonScreen({
    setScreen,
+   screen,
    setCurrentLesson,
    currentLesson,
    currentUnit,
@@ -150,20 +155,24 @@ const customRenderers = {
          customRenderers={customRenderers}
          setCurrentLesson={setCurrentLesson}
          currentUnit={currentUnit}
+         setScreen={setScreen}
+         screen={screen}
        />
      );   
  }
 
 
 const styles = StyleSheet.create({
-    lessonId: {
+  lessonId: {
     fontSize: 48,
     fontWeight: "bold",
+    textAlign: "center",
   },
   lessonTitle: {
+    marginBottom: 20,
     fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 20,
+    textAlign: "center",
   },
   listContainer: {
     paddingHorizontal: 16,

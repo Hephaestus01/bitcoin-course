@@ -9,11 +9,13 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+import NavBar from "../components/NavBar";
 import UnitCarousel from "../components/UnitCarousel";
 import Button from "../components/Button";
 
 export default function HomeScreen({
   setScreen,
+  screen,
   setCurrentLesson,
   currentLesson,
   setCurrentUnit,
@@ -21,6 +23,7 @@ export default function HomeScreen({
 }) {
   return (
     <>
+      <NavBar setScreen={setScreen} screen={screen} />
       <UnitCarousel
         setScreen={setScreen}
         setCurrentLesson={setCurrentLesson}
