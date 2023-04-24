@@ -37,7 +37,7 @@ export default function NavBar({ setScreen, screen }) {
 
         <TouchableOpacity
           style={styles.navIcon}
-          onPress={() => setScreen("home")}
+          onPress={() => setScreen("nav")}
         >
           <FontAwesomeIcon icon={faBars} size={40} />
         </TouchableOpacity>

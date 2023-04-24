@@ -7,7 +7,9 @@ import {
   ScrollView,
   SafeAreaView,
   TouchableOpacity,
+  useWindowDimensions,
 } from "react-native";
+import RenderHTML from "react-native-render-html";
 
 export default function LessonScreen({
   setScreen,
@@ -15,32 +17,40 @@ export default function LessonScreen({
   currentLesson,
 }) {
   let lesson = currentLesson;
+  const { width } = useWindowDimensions();
 
-  const renderItem = () => {
+  const renderItem = ({ item }) => {
     return (
       <ScrollView>
         <View style={styles.card}>
           <Text style={styles.lessonId}>Lesson {lesson.id}</Text>
           <Text style={styles.lessonTitle}>{lesson.title}</Text>
           <View>
-            {lesson.content.map((segment, index) =>
-              // Conditional rendering based on the type of the segment
-              typeof segment === "string" ? (
-                <Text style={styles.segmentText} key={index}>
-                  {segment}
-                </Text>
-              ) : (
-                segment.list && (
+            {lesson.content.map((segment, index) => {
+              if (typeof segment === "string" || segment.style) {
+                return (
+                  <React.Fragment key={index}>
+                    <RenderHTML
+                      contentWidth={width}
+                      source={{ html: segment }}
+                    />
+                  </React.Fragment>
+                );
+              } else if (segment.list) {
+                return (
                   <View key={index} style={styles.listContainer}>
                     {segment.list.map((item, itemIndex) => (
-                      <Text style={styles.listItem} key={itemIndex}>
-                        {"\u2022"} {item}
-                      </Text>
+                      <React.Fragment key={itemIndex}>
+                        <RenderHTML
+                          contentWidth={width}
+                          source={{ html: item }}
+                        />
+                      </React.Fragment>
                     ))}
                   </View>
-                )
-              )
-            )}
+                );
+              }
+            })}
           </View>
         </View>
       </ScrollView>
@@ -62,8 +72,8 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 20,
     borderWidth: 1,
-    padding: 20,
-    margin: 20,
+    padding: 10,
+    margin: 10,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -86,16 +96,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 20,
   },
-  segmentText: {
-    fontSize: 16,
-    marginBottom: 10,
-  },
   listContainer: {
     marginLeft: 20,
     marginBottom: 10,
-  },
-  listItem: {
-    fontSize: 16,
-    marginBottom: 5,
   },
 });

@@ -27,7 +27,7 @@ export const data = [
           },
           {
             list: [
-              "Collectible. “This might be rare, and therefore might be valuable. I’ll keep it.” Gold, silver, stones, fossils. In the movie Uncut Gems, Adam Sandler is excited by a new opal, whose value evolves over the course of the film. Thus the danger with collectibles: they may be new on the scene, with unknown history. Are they truly scarce? Are they truly rare?",
+              "<b>Collectible.</b> “This might be rare, and therefore might be valuable. I’ll keep it.” Gold, silver, stones, fossils. In the movie Uncut Gems, Adam Sandler is excited by a new opal, whose value evolves over the course of the film. Thus the danger with collectibles: they may be new on the scene, with unknown history. Are they truly scarce? Are they truly rare?",
               "Store of Value. “This is rare, and is therefore valuable. It will hold its value, or perhaps even increase over time.” Gold has made it to this stage, retaining its value over time. Inflation and interest compromise fiat’s store of value because money’s rarity is controlled by the governmental and Federal Reserve decisions. No one can tell the earth to produce more gold, but the Fed can print more paper.",
               "Medium of Exchange. “We don’t have to trade apples-to-shoes. We can trade in money.” This streamlines trade and commerce, accommodating a growing global economy.",
               "Unit of Account. Usually a distinction of a currency. “In Paris, the Unit of Account is the Euro. In Thailand, the Unit of Account is the bat.” In Mexico, the U.S. dollar is still accepted as a “Medium of Exchange” and then converted to pesos, which are the local currency and “Unit of Account.”",

@@ -14,6 +14,7 @@ import {
 import NavBar from "./components/NavBar";
 import HomeScreen from "./screens/HomeScreen";
 import LessonScreen from "./screens/LessonScreen";
+import NavScreen from "./screens/NavScreen";
 
 import { data } from "./data/real-real-data";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -43,6 +44,12 @@ export default function App() {
           />
         ) : screen === "lesson" ? (
           <LessonScreen
+            setScreen={setScreen}
+            setCurrentLesson={setCurrentLesson}
+            currentLesson={currentLesson}
+          />
+        ) : screen === "nav" ? (
+          <NavScreen
             setScreen={setScreen}
             setCurrentLesson={setCurrentLesson}
             currentLesson={currentLesson}
