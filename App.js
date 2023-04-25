@@ -16,8 +16,6 @@ import HomeScreen from "./screens/HomeScreen";
 import LessonScreen from "./screens/LessonScreen";
 import NavScreen from "./screens/NavScreen";
 
-import NavBarAdv from "./components/NavBarAdv";
-
 import { data } from "./data/real-real-data";
 import { library } from "@fortawesome/fontawesome-svg-core";
 library.add();

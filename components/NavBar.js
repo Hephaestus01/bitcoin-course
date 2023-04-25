@@ -14,7 +14,11 @@ import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 
 export default function NavBar({ setScreen, screen }) {
   return (
-    <View style={{ flexDirection: "row"}}>
+    <View
+      style={{
+        flexDirection: "row",
+      }}
+    >
       <View
         style={{
           flex: 1,

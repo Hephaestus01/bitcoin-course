@@ -7,6 +7,7 @@ import {
   ScrollView,
   TouchableOpacity,
   useWindowDimensions,
+  Animated
 } from "react-native";
 import RenderHTML from "react-native-render-html";
 import Modal from "react-native-modal";
@@ -51,7 +52,7 @@ const customRenderers = {
    setScreen,
    screen
  }) => {
-   const scrollViewRef = useRef();
+   const scrollViewRef = useRef(new Animated.Value(0)).current;
 
    useEffect(() => {
      if (scrollViewRef.current) {

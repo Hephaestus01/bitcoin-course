@@ -30,6 +30,7 @@ export default function HomeScreen({
         currentLesson={currentLesson}
         setCurrentUnit={setCurrentUnit}
         currentUnit={currentUnit}
+        styles={{}}
       />
     </>
   );
