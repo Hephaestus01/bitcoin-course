@@ -2,6 +2,7 @@ export const data = [
   {
     id: 1,
     title: "Understanding Money",
+    tagline: "Tagline for Unit 1",
     lessons: [
       {
         id: "1",
@@ -132,6 +133,7 @@ export const data = [
   {
     id: 2,
     title: "Cryptocurrency",
+    tagline: "Tagline for Unit 2",
     lessons: [
       {
         id: "1",
@@ -275,6 +277,7 @@ export const data = [
   {
     id: 3,
     title: "Intro to Bitcoin",
+    tagline: "Tagline for Unit 3",
     lessons: [
       {
         id: "1",
@@ -416,6 +419,7 @@ export const data = [
   {
     id: 4,
     title: "Bitcoin Nuances, Headlines, Myths",
+    tagline: "Tagline for Unit 4",
     lessons: [
       {
         id: "1",
@@ -556,6 +560,7 @@ export const data = [
   {
     id: 5,
     title: "Owning, Buying, and Selling Bitcoin",
+    tagline: "Tagline for Unit 5",
     lessons: [
       {
         id: "1",
