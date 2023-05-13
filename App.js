@@ -11,10 +11,10 @@ import {
   StatusBar,
 } from "react-native";
 
-import NavBar from "./components/NavBar";
 import HomeScreen from "./screens/HomeScreen";
 import LessonScreen from "./screens/LessonScreen";
 import NavScreen from "./screens/NavScreen";
+import NavBar from './components/NavBar';
 
 import { data } from "./data/real-real-data";
 import { library } from "@fortawesome/fontawesome-svg-core";

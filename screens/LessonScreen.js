@@ -165,6 +165,7 @@ const customRenderers = {
 
 const styles = StyleSheet.create({
   lessonId: {
+    // fontFamily: 'AbrilFatface-Regular',
     fontSize: 48,
     fontWeight: "bold",
     textAlign: "center",

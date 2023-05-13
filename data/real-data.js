@@ -4,7 +4,7 @@ export const data = [
     title: "Understanding Money",
     lessons: [
       {
-        id: "1a",
+        id: "1",
         title: "What is Money and Why We Need It",
         contentSummary: [
           "Money versus Currency",
@@ -31,7 +31,7 @@ export const data = [
         ],
       },
       {
-        id: "1b",
+        id: "2",
         title: "History of Money",
         contentSummary: [
           "Tribes who met each other's needs",
@@ -60,7 +60,7 @@ export const data = [
         ],
       },
       {
-        id: "1c",
+        id: "3",
         title: "Qualities of Sound Money",
         contentSummary: [
           "Identifiable - easy to recognize and hard to counterfeit",
@@ -134,7 +134,7 @@ export const data = [
     title: "Cryptocurrency",
     lessons: [
       {
-        id: "2a",
+        id: "1",
         title: "What is Cryptocurrency?",
         contentSummary: [
           "Digital or virtual currency that uses cryptography for security",
@@ -159,7 +159,7 @@ export const data = [
         ],
       },
       {
-        id: "2b",
+        id: "2",
         title: "What is encryption?",
         contentSummary: [
           "The process of converting information into code to prevent unauthorized access",
@@ -182,7 +182,7 @@ export const data = [
         ],
       },
       {
-        id: "2c",
+        id: "3",
         title: "What is a Blockchain?",
         contentSummary: [
           "A distributed ledger technology",
@@ -207,7 +207,7 @@ export const data = [
         ],
       },
       {
-        id: "2d",
+        id: "4",
         title: "What Sets Bitcoin apart / Bitcoin vs Everything Else",
         contentSummary: [
           "First and most well-known cryptocurrency",
@@ -277,7 +277,7 @@ export const data = [
     title: "Intro to Bitcoin",
     lessons: [
       {
-        id: "3a",
+        id: "1",
         title: "Satoshi Nakamoto",
         contentSummary: [
           "Pseudonymous creator of Bitcoin",
@@ -301,7 +301,7 @@ export const data = [
         ],
       },
       {
-        id: "3b",
+        id: "2",
         title: "Mining and Proof of Work",
         contentSummary: [
           "Mining as a process to secure the network and validate transactions",
@@ -323,7 +323,7 @@ export const data = [
         ],
       },
       {
-        id: "3c",
+        id: "3",
         title: "Properties of Sound Money that Bitcoin Ticks",
         contentSummary: [
           "Identifiable, divisible, portable, acceptable, scarce, durable, and stable in value",
@@ -347,7 +347,7 @@ export const data = [
         ],
       },
       {
-        id: "3d",
+        id: "4",
         title: "The Price of Bitcoin",
         contentSummary: [
           "Factors influencing the price of Bitcoin",
@@ -418,7 +418,7 @@ export const data = [
     title: "Bitcoin Nuances, Headlines, Myths",
     lessons: [
       {
-        id: "4a",
+        id: "1",
         title: "Benefits of Bitcoin",
         contentSummary: [
           "Decentralization and removal of intermediaries",
@@ -443,7 +443,7 @@ export const data = [
         ],
       },
       {
-        id: "4b",
+        id: "2",
         title: "Limitations of Bitcoin",
         contentSummary: [
           "Volatility and price fluctuations",
@@ -467,7 +467,7 @@ export const data = [
         ],
       },
       {
-        id: "4c",
+        id: "3",
         title: "Myths and Conundrums",
         contentSummary: [
           "Bitcoin is only used for illegal activities",
@@ -490,7 +490,7 @@ export const data = [
         ],
       },
       {
-        id: "4d",
+        id: "4",
         title: "Bitcoin's Energy Usage",
         contentSummary: [
           "Energy consumption of mining and proof of work",
@@ -558,7 +558,7 @@ export const data = [
     title: "Owning, Buying, and Selling Bitcoin",
     lessons: [
       {
-        id: "5a",
+        id: "1",
         title: "Buying Bitcoin",
         contentSummary: [
           "Different methods of buying Bitcoin",
@@ -581,7 +581,7 @@ export const data = [
         ],
       },
       {
-        id: "5b",
+        id: "2",
         title: "Storing Your Bitcoin",
         contentSummary: [
           "Introduction to cryptocurrency wallets",
@@ -603,7 +603,7 @@ export const data = [
         ],
       },
       {
-        id: "5c",
+        id: "3",
         title: "Selling Bitcoin",
         contentSummary: [
           "Methods of selling Bitcoin",
