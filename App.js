@@ -15,13 +15,14 @@ import HomeScreen from "./screens/HomeScreen";
 import LessonScreen from "./screens/LessonScreen";
 import NavScreen from "./screens/NavScreen";
 import NavBar from './components/NavBar';
+import CourseMapScreen from "./screens/CourseMapScreen";
 
 import { data } from "./data/real-real-data";
 import { library } from "@fortawesome/fontawesome-svg-core";
 library.add();
 
 export default function App() {
-  const [screen, setScreen] = useState("home");
+  const [screen, setScreen] = useState("map");
   const [currentUnit, setCurrentUnit] = useState(data[0]);
   const [currentLesson, setCurrentLesson] = useState(data[0].lessons[0]);
 
@@ -51,8 +52,8 @@ export default function App() {
             currentLesson={currentLesson}
             currentUnit={currentUnit}
           />
-        ) : screen === "nav" ? (
-          <NavScreen
+        ) : screen === "map" ? (
+          <CourseMapScreen
             setScreen={setScreen}
             setCurrentLesson={setCurrentLesson}
             currentLesson={currentLesson}
