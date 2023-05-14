@@ -28,10 +28,10 @@ export default function NavBar({ setScreen, screen }) {
           paddingVertical: 20,
         }}
       >
-        {screen !== "home" ? (
+        {screen !== "map" ? (
           <TouchableOpacity
             style={styles.arrowIcon}
-            onPress={() => setScreen("home")}
+            onPress={() => setScreen("map")}
           >
             <FontAwesomeIcon icon={faArrowLeft} size={40} />
           </TouchableOpacity>

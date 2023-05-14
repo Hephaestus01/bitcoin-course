@@ -17,7 +17,7 @@ import NavScreen from "./screens/NavScreen";
 import NavBar from './components/NavBar';
 import CourseMapScreen from "./screens/CourseMapScreen";
 
-import { data } from "./data/real-real-data";
+import { data } from "./data/real-data";
 import { library } from "@fortawesome/fontawesome-svg-core";
 library.add();
 
@@ -55,6 +55,7 @@ export default function App() {
         ) : screen === "map" ? (
           <CourseMapScreen
             setScreen={setScreen}
+            screen={screen}
             setCurrentLesson={setCurrentLesson}
             currentLesson={currentLesson}
           />

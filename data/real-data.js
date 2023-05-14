@@ -17,18 +17,25 @@ export const data = [
           "The problem money has to solve: how can we all trade together? What if I need shoes but the cobbler doesn't need my apples? What if my apples rot by the time they're needed? This is the coincidence of wants, and it's rare.",
         ],
         content: [
-          "Money and currency are terms that are often used interchangeably, but they actually represent distinct concepts. Money is a tool that facilitates the exchange of goods and services, while currency is a physical or digital representation of money, such as coins, banknotes, or digital tokens. Money, in essence, is a technology that has evolved over time to serve various purposes in society. It enables people to conduct transactions and trade goods and services efficiently, without the need for a direct barter system.",
-          "At its core, money is an agreement among individuals within a community to assign value to certain items, such as gold, coins, or banknotes. This agreement allows these items to be used in exchange for goods and services, which in turn leads to price discovery and the establishment of a shared understanding of worth. Without money, trading goods and services would be challenging, as it would rely on the coincidence of wants—finding someone who wants what you have and has what you want. Money solves this problem by providing a universally accepted medium of exchange.",
+          "<p>“Money” versus “Currency”: Money and currency are terms that are often used interchangeably, but they actually represent distinct concepts. Money is a tool that facilitates the exchange of goods and services, while currency is the representation of money, like seashells, coins, or digital tokens.</p>",
+          "<p>Money as “technology” or a “tool.” Money allows people to conduct transactions and trade goods and services efficiently, without the need for a direct barter system.</p>",
+          "<p>Money as a solution. Without money, trading goods and services would be challenging, as it would rely on the “coincidence of wants”—finding someone who wants what you have and has what you want at exactly the same time. What if I need shoes but the cobbler doesn’t need my apples? What if my apples rot by the time they’re needed? Money solves this problem by providing a universally accepted “medium of exchange.”</p>",
+          {
+            listIntro:
+              "<p><i>The phases of money. Many things have become money. Here’s their evolution:</i></p>",
+          },
           {
             list: [
-              "Collectible: Items with intrinsic value, such as gold or silver, were collected and traded for their beauty or rarity.",
-              "Store of Value: Money became a way to store wealth over time, allowing individuals to save and accumulate resources.",
-              "Medium of Exchange: Money facilitated the exchange of goods and services, streamlining trade and commerce.",
-              "Unit of Account: Money provided a standard unit for measuring the value of goods and services, simplifying transactions and comparisons.",
+              "<ul><li><b>Collectible.</b> “This might be rare, and therefore might be valuable. I’ll keep it.” Gold, silver, stones, fossils. In the movie Uncut Gems, Adam Sandler is excited by a new opal, whose value evolves over the course of the film. Thus the danger with collectibles: they may be new on the scene, with unknown history. Are they truly scarce? Are they truly rare?</li>" +
+                "<li><b>Store of Value.</b> “This is rare, and is therefore valuable. It will hold its value, or perhaps even increase over time.” Gold has made it to this stage, retaining its value over time. Inflation and interest compromise fiat’s store of value because money’s rarity is controlled by the governmental and Federal Reserve decisions. No one can tell the earth to produce more gold, but the Fed can print more paper.</li>" +
+                "<li><b>Medium of Exchange.</b> “We don’t have to trade apples-to-shoes. We can trade in money.” This streamlines trade and commerce, accommodating a growing global economy.</li>" +
+                "<li><b>Unit of Account.</b> Usually a distinction of a currency. “In Paris, the Unit of Account is the Euro. In Thailand, the Unit of Account is the bat.” In Mexico, the U.S. dollar is still accepted as a “Medium of Exchange” and then converted to pesos, which are the local currency and “Unit of Account.”</li></ul>",
             ],
           },
-          "The introduction of money revolutionized the way people traded goods and services, moving society away from the barter system. Bartering relied on the coincidence of wants, which made it difficult for individuals to find suitable trading partners. For example, if someone needed shoes but the cobbler didn't need their apples, a direct trade wouldn't be possible. Furthermore, perishable goods like apples could spoil before they could be traded, further complicating the barter system.",
-          "Money solves the problem of the coincidence of wants by providing a universally accepted medium of exchange, allowing people to trade goods and services efficiently. With money, individuals no longer need to find someone who wants what they have and has what they want. Instead, they can simply exchange their goods or services for money, which can then be used to acquire the desired items from others.",
+          {
+            callout:
+              "<p>Keep in Mind: Bitcoin is oscillating between phases of money. Some people buy things with it: it’s a “medium of exchange.” Others trust its ability to “store value” more than the dollar. Others point to its volatility and relegate it to “collectible.” Because money is an expression of value, we are still very much in the “price discovery” phase of bitcoin—a process that gold went through long ago.<p>",
+          },
         ],
       },
       {
@@ -43,16 +50,16 @@ export const data = [
           "The idea of money has been around for centuries, with civilizations coming up with their own monies separately. 12-foot round rai stones; silks; spices; shells; livestock; gold—these were all treated as monies: ways to trade across time and space.",
         ],
         content: [
-          "Throughout history, human societies have developed various forms of money to facilitate trade and commerce. The earliest tribes would meet each other's needs by bartering goods and services, exchanging items directly based on their perceived value. However, as societies grew more complex and trade became more specialized, the need for a more efficient system of exchange became apparent.",
-          "The barter system, while functional in small communities, became increasingly impractical as trade networks expanded and the range of goods and services diversified. As a result, different civilizations around the world began to develop their own forms of money, often independently of one another. These early forms of money took various shapes and forms, from precious metals and stones to textiles, spices, and livestock.",
+          "<p>Throughout history, human societies have developed various forms of money to facilitate trade and commerce. The earliest tribes would meet each other's needs by bartering goods and services, exchanging items directly based on their perceived value. However, as societies grew more complex and trade became more specialized, the need for a more efficient system of exchange became apparent.</p>",
+          "<p>The barter system, while functional in small communities, became increasingly impractical as trade networks expanded and the range of goods and services diversified. As a result, different civilizations around the world began to develop their own forms of money, often independently of one another. These early forms of money took various shapes and forms, from precious metals and stones to textiles, spices, and livestock.</p>",
           {
             list: [
-              "12-foot round rai stones: Large, circular stones used as a form of currency on the Micronesian island of Yap.",
-              "Silks: Highly valued textiles used as currency in ancient China.",
-              "Spices: Rare and valuable spices, such as pepper and cinnamon, were used as currency in ancient trade networks.",
-              "Shells: Cowrie shells were used as currency in Africa, Asia, and the Americas.",
-              "Livestock: Cattle, sheep, and other animals served as a form of currency in many ancient societies.",
-              "Gold: Precious metals like gold and silver have been used as currency for thousands of years, due to their rarity, durability, and intrinsic value.",
+              "<ul><li>12-foot round rai stones: Large, circular stones used as a form of currency on the Micronesian island of Yap.</li>",
+              "<li>Silks: Highly valued textiles used as currency in ancient China.</li>",
+              "<li>Spices: Rare and valuable spices, such as pepper and cinnamon, were used as currency in ancient trade networks.</li>",
+              "<li>Shells: Cowrie shells were used as currency in Africa, Asia, and the Americas.</li>",
+              "<li>Livestock: Cattle, sheep, and other animals served as a form of currency in many ancient societies.</li>",
+              "<li>Gold: Precious metals like gold and silver have been used as currency for thousands of years, due to their rarity, durability, and intrinsic value.</li></ul>",
             ],
           },
           "The development of money played a crucial role in the process of globalization and the exchange of goods and ideas between different cultures. Money facilitated trade and enabled the specialization of labor, as people could now focus on producing specific goods or providing specialized services and exchange their products for money. This in turn allowed them to acquire other goods and services that they needed, without having to rely on the barter system.",
